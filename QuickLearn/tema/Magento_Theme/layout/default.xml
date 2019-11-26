@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <container name="all.pages" htmlTag="div" htmlClass="Todas paginas">
+                <block name="all.content" template="Magento_Theme::html/conteudo.phtml">
+                    <arguments>
+                       <argument name="default_msg" xsi:type="string">Carrega em todas as páginas</argument>
+                    </arguments>
+                    <block name="aditional.block" template="Magento_Theme::html/aditional.phtml" />
+                </block>
+                <block class="Magento\Cms\Block\Block" name="cms.block">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">categoria-block</argument>
+                    </arguments>
+                </block>
+            </container>
+            <referenceBlock name="content.page" remove="true" />
+        </referenceContainer>
+    </body>
+</page>

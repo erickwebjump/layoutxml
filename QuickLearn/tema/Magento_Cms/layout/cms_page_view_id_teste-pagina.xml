@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <link src="Magento_Theme::js/script.js" />
+    </head>
+    <update handle="shared_block" />
+    <body>
+        <move element="shared.content" destination="content" after="-" />
+        <referenceContainer name="content">
+            <referenceBlock name="all.content">
+                <arguments>
+                   <argument name="page_msg" xsi:type="string">Carrega em todas as páginas editado só nessa</argument>
+                </arguments>
+            </referenceBlock>
+            <block name="content.page" template="Magento_Cms::conteudoPage.phtml" />
+            <!-- Utilizado remove="false" pois o bloco está sendo removido em todas as paginas (somente pra mostrar a funcionalidade) -->
+            <referenceBlock name="content.page" remove="false" />
+        </referenceContainer>
+    </body>
+</page>

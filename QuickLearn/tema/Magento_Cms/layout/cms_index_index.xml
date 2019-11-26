@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+    	<move element="aditional.block" destination="container.home" before="-" />
+        <referenceContainer name="content">
+            <container name="container.home" htmlTag="div" htmlClass="containerHome containerClass" before="-">
+			    <block name="home.content" template="Magento_Theme::html/home-content.phtml">
+                    <arguments>
+                       <argument name="home_msg" xsi:type="string">Carrega somente na home</argument>
+                    </arguments>
+                </block>
+			</container>
+        </referenceContainer>
+    </body>
+</page>

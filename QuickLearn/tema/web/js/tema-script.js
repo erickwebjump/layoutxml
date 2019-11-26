@@ -1,0 +1,1 @@
+alert('Script carregado em todas as páginas');
